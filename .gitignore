@@ -1,4 +1,5 @@
 ##ignore this file##
+Application/Runtime/*
 .idea
 tags
 openctags.tags
