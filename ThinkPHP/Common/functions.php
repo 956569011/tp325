@@ -971,6 +971,7 @@ function layout($layout)
  */
 function U($url = '', $vars = '', $suffix = true, $domain = false)
 {
+
     // 解析URL
     $info = parse_url($url);
     $url  = !empty($info['path']) ? $info['path'] : ACTION_NAME;
@@ -1025,6 +1026,7 @@ function U($url = '', $vars = '', $suffix = true, $domain = false)
     // URL组装
     $depr    = C('URL_PATHINFO_DEPR');
     $urlCase = C('URL_CASE_INSENSITIVE');
+
     if ($url) {
         if (0 === strpos($url, '/')) {
             // 定义路由

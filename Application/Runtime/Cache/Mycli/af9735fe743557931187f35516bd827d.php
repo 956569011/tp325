@@ -1,1 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?>命令模式访问 mycli

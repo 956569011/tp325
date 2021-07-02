@@ -26,6 +26,7 @@ class Dispatcher
     {
         $varPath = C('VAR_PATHINFO');
         $urlCase = C('URL_CASE_INSENSITIVE');
+
         if (isset($_GET[$varPath])) { // 判断URL里面是否有兼容模式参数
             $_SERVER['PATH_INFO'] = $_GET[$varPath];
             unset($_GET[$varPath]);
@@ -194,6 +195,7 @@ class Dispatcher
 
         if (!defined('__APP__')) {
             $urlMode = C('URL_MODEL');
+
             if (URL_COMPAT == $urlMode) {
                 // 兼容模式判断
                 define('PHP_FILE', _PHP_FILE_ . '?' . $varPath . '=');
@@ -213,6 +215,7 @@ class Dispatcher
         // 模块URL地址
         $moduleName = defined('MODULE_ALIAS') ? MODULE_ALIAS : MODULE_NAME;
         define('__MODULE__', (defined('BIND_MODULE') || !C('MULTI_MODULE')) ? __APP__ : __APP__ . '/' . ($urlCase ? strtolower($moduleName) : $moduleName));
+
         // 获取控制器和操作名
         define('CONTROLLER_NAME', self::getController($paths, $urlCase));
         define('ACTION_NAME', self::getAction($paths, $urlCase));
@@ -236,7 +239,6 @@ class Dispatcher
         // 当前控制器的UR地址
         $controllerName = defined('CONTROLLER_ALIAS') ? CONTROLLER_ALIAS : CONTROLLER_NAME;
         define('__CONTROLLER__', __MODULE__ . $depr . (defined('BIND_CONTROLLER') ? '' : ($urlCase ? parse_name($controllerName) : $controllerName)));
-
         // 当前操作的URL地址
         define('__ACTION__', __CONTROLLER__ . $depr . (defined('ACTION_ALIAS') ? ACTION_ALIAS : ACTION_NAME));
 

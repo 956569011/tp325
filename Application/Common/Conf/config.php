@@ -3,8 +3,15 @@
         $session_temp = APP_PATH.'/session_temp/';
         $path = file_exists($session_temp) ? $session_temp : mkdir($session_temp,0777,true);
 return array(
+//    'MODULE_ALLOW_LIST' => array('Home'),
+    'DEFAULT_MODULE'         => 'Home', // 默认模块
+    'DEFAULT_CONTROLLER'     => 'Index', // 默认控制器名称
+    'DEFAULT_ACTION'         => 'index', // 默认操作名称
 
 
+
+
+//    'URL_MODEL'              => 1, // URL访问模式,可选参数0、1、2、3,代表以下四种模式：
     // 'SHOW_PAGE_TRACE' =>true,
 
     //使用浏览器cookie 存seesion id

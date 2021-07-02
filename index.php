@@ -23,7 +23,7 @@ define('APP_DEBUG',True);
 require 'vendor/autoload.php';
 // 定义应用目录
 define('APP_PATH','./Application/');
-
+define('BIND_MODULE','Home');
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
 

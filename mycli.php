@@ -6,13 +6,14 @@
 if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
-define('APP_DEBUG',True);
+
 define('BIND_MODULE','Mycli');//这儿声明了绑定模块系统会自动生成
+define('APP_DEBUG',false);
 define('APP_MODE','mycli');
 define('APP_ROOT', dirname(__FILE__));
 
 //composer 自动加载文件
-require 'vendor/autoload.php';
+//require 'vendor/autoload.php';
 // 定义应用目录
 define('APP_PATH', APP_ROOT . '/Application/');
 

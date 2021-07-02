@@ -15,7 +15,7 @@
 if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
-define('APP_DEBUG',True);
+  define('APP_DEBUG',True);
 
 //产生lite文件
 // define('BUILD_LITE_FILE',true);
@@ -28,7 +28,7 @@ define('BIND_MODULE','Wx');
 //生成模型
 // define('BUILD_MODEL_LIST','User,Menu');
 //创建当前自定义的控制文件
-define('BUILD_CONTROLLER_LIST','Index');
+//define('BUILD_CONTROLLER_LIST','Index');
 
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
