@@ -1,0 +1,6 @@
+[ 2021-06-21T12:46:24+08:00 ] 127.0.0.1 /tp323/api.php/index/makeSessionFile
+ERR: 非法操作:makeSessionFile
+
+[ 2021-06-21T13:06:10+08:00 ] 127.0.0.1 /tp323/api.php/index/makeSessFile
+ERR: syntax error, unexpected '}'
+

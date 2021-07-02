@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function click_func() {
+            var u = '';
+            console.log('overfirst');
+
+            var t = document.title = 'test-中国';
+            if (!u) {
+                u = '3.html';
+                // u = window.location.href + '/chenyao';
+            }
+            history.pushState({
+                'a': 1,
+                'b': 2
+            }, t, u);
+            console.log(history.state);
+        };
+    </script>
+</head>
+
+<body>
+    <a href="" onclick="click_func();return false;">one</a>
+    <a href="" id='btn'>tp3.2.3</a>
+</body>
+<script>
+    document.getElementById('btn').onclick = function() {
+        console.log('执行要发生的事件逻辑');
+        return false;
+    }
+    window.onpopstate = function(event) {
+
+        //做一些操作
+        console.log('ht');
+        console.log(event.state); // 当前历史记录条目的状态
+
+    };
+    // window.addEventListener('popstate', function(event) {
+
+    //     //做一些操作
+
+    // });
+</script>
+
+</html>
